@@ -6,22 +6,22 @@ import java.util.ArrayDeque;
 
 class BinaryTree {
     static class BinaryTreeNode {
-        char value;
+        int value;
         BinaryTreeNode left_child;
         BinaryTreeNode right_child;
 
-        BinaryTreeNode(char value) {
+        BinaryTreeNode(int value) {
             this.value = value;
             this.left_child = null;
             this.right_child = null;
         }
 
-        BinaryTreeNode addLeftChild(char value) {
+        BinaryTreeNode addLeftChild(int value) {
             this.left_child = new BinaryTreeNode(value);
             return this.left_child;
         }
 
-        BinaryTreeNode addRightChild(char value) {
+        BinaryTreeNode addRightChild(int value) {
             this.right_child = new BinaryTreeNode(value);
             return this.right_child;
         }
@@ -102,20 +102,20 @@ class BinaryTree {
     public static void main(String[] args) {
 
         // lager rot-noden niva 0
-        BinaryTreeNode root = new BinaryTreeNode('A');
+        BinaryTreeNode root = new BinaryTreeNode(4);
 
 
         // Legger inn resterende noder på nivå 1
-        BinaryTreeNode b = root.addLeftChild('B');
-        BinaryTreeNode c = root.addRightChild('C');
+        BinaryTreeNode b = root.addLeftChild(2);
+        BinaryTreeNode c = root.addRightChild(7);
 
 
         // legger inn noder på nivå 2
-        BinaryTreeNode d = b.addLeftChild('D');
-        BinaryTreeNode e = b.addRightChild('E');
+       // BinaryTreeNode d = b.addLeftChild(4);
+       // BinaryTreeNode e = b.addRightChild(9);
 
-        BinaryTreeNode f = c.addLeftChild('F');
-        BinaryTreeNode g = c.addRightChild('G');
+        BinaryTreeNode f = c.addLeftChild(4);
+        BinaryTreeNode g = c.addRightChild(9);
 
         // Kalle funksjomnen vår
 
